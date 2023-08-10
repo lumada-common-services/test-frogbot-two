@@ -21,8 +21,8 @@ jobs:
         distribution: 'temurin'
         cache: maven
         
-    - name: Build with Maven
-      run: mvn clean install --file pom.xml
+#     - name: Build with Maven
+#       run: mvn clean install --file pom.xml
 
     - name: FrogBot
       uses: jfrog/frogbot@v2.8.1
