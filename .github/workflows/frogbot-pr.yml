@@ -7,7 +7,7 @@ on:
 jobs:
   runPR:
     runs-on: ubuntu-latest
-    environment: frogbot
+#     environment: frogbot
     
     steps:
     - uses: actions/checkout@v3
